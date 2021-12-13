@@ -7,7 +7,7 @@ public class TokenProvider : ITokenProvider
     private readonly HttpClient _httpClient;
     private readonly PasswordTokenRequest _passwordTokenOptions;
     private readonly SemaphoreSlim _semaphoreSlim;
-    private string _accessToken;
+    private string _accessToken = string.Empty;
     private DateTime _expirationTime = DateTime.Now;
 
     public TokenProvider(HttpClient httpClient, IOptions<PasswordTokenRequest> passwordTokenOptions)
